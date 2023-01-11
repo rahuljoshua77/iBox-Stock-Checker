@@ -47,7 +47,7 @@ def main():
                 try:
                     response = requests.post(
                     url='https://api.telegram.org/bot{0}/{1}'.format(token, "sendMessage"),
-                    data={'chat_id': username_channel, 'text': f"[{time.strftime('%d-%m-%y %X')}] {title} | Stock: {get_stock}"}
+                    data={'chat_id': username_channel, 'text': f"[{time.strftime('%d-%m-%y %X')}] {title} | Stock: {get_stock} | {url} "}
                     ).json()
                 except:
                     pass
